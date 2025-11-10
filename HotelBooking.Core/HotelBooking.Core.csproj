@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <LangVersion>default</LangVersion>
   </PropertyGroup>
 
@@ -9,5 +9,6 @@
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
+    <Content Include="**/*.feature" />
   </ItemGroup>
 </Project>
