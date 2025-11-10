@@ -1,12 +1,12 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using HotelBooking.Core;
+using HotelBooking.Core.Entities;
+using HotelBooking.Core.Interfaces;
 using HotelBooking.Mvc.Models;
 
-namespace HotelBooking.Mvc.Controllers
-{
+namespace HotelBooking.Mvc.Controllers;
+
     public class BookingsController : Controller
     {
         private IRepository<Booking> bookingRepository;
@@ -165,4 +165,3 @@ namespace HotelBooking.Mvc.Controllers
         }
 
     }
-}

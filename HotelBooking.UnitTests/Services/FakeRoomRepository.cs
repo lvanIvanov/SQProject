@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using HotelBooking.Core;
+using HotelBooking.Core.Interfaces;
+using HotelBooking.Core.Entities;
 
-namespace HotelBooking.UnitTests.Fakes
-{
+namespace HotelBooking.UnitTests.Services;
+
     public class FakeRoomRepository : IRepository<Room>
     {
         // This field is exposed so that a unit test can validate that the
@@ -55,4 +56,3 @@ namespace HotelBooking.UnitTests.Fakes
             return Task.CompletedTask;
         }
     }
-}

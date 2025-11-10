@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace HotelBooking.Core
-{
+namespace HotelBooking.Core.Entities;
+
     public class Booking
     {
         public int Id { get; set; }
@@ -13,4 +13,3 @@ namespace HotelBooking.Core
         public virtual Customer Customer { get; set; }
         public virtual Room Room { get; set; }
     }
-}

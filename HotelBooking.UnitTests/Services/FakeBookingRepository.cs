@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using HotelBooking.Core;
+using HotelBooking.Core.Interfaces;
+using HotelBooking.Core.Entities;
 
-namespace HotelBooking.UnitTests.Fakes
-{
+namespace HotelBooking.UnitTests.Services;
+
     public class FakeBookingRepository : IRepository<Booking>
     {
         private DateTime fullyOccupiedStartDate;
@@ -75,4 +76,3 @@ namespace HotelBooking.UnitTests.Fakes
             return Task.CompletedTask;
         }
     }
-}

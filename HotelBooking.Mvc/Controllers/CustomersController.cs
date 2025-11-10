@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using HotelBooking.Core;
+﻿using HotelBooking.Core.Entities;
+using HotelBooking.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace HotelBooking.Mvc.Controllers
-{
+namespace HotelBooking.Mvc.Controllers;
+
     public class CustomersController : Controller
     {
         private IRepository<Customer> repository;
@@ -135,4 +135,3 @@ namespace HotelBooking.Mvc.Controllers
         }
 
     }
-}

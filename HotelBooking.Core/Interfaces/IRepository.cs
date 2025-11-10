@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HotelBooking.Core
-{
+namespace HotelBooking.Core.Interfaces;
+
     public interface IRepository<T>
     {
         Task<IEnumerable<T>> GetAllAsync();
@@ -11,4 +11,4 @@ namespace HotelBooking.Core
         Task EditAsync(T entity);
         Task RemoveAsync(int id);
     }
-}
+

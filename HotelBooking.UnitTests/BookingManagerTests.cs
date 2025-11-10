@@ -1,14 +1,16 @@
 using System;
-using HotelBooking.Core;
-using HotelBooking.UnitTests.Fakes;
+using HotelBooking.Core.Entities;
+using HotelBooking.Core.Interfaces;
+using HotelBooking.Core.Services;
+using HotelBooking.UnitTests.Services;
 using Xunit;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
 
-namespace HotelBooking.UnitTests
-{
+namespace HotelBooking.UnitTests.Services;
+
     public class BookingManagerTests
     {
         private IBookingManager bookingManager;
@@ -157,4 +159,4 @@ namespace HotelBooking.UnitTests
 
 
     }
-}
+

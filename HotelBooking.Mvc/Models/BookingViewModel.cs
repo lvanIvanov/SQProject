@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using HotelBooking.Core;
+﻿using HotelBooking.Core.Entities;
+using HotelBooking.Core.Interfaces;
 
-namespace HotelBooking.Mvc.Models
-{
+namespace HotelBooking.Mvc.Models;
+
     public class BookingViewModel : IBookingViewModel
     {
         private IRepository<Booking> bookingRepository;
@@ -86,4 +84,3 @@ namespace HotelBooking.Mvc.Models
         }
 
     }
-}

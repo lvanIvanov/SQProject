@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using HotelBooking.Core;
+using HotelBooking.Core.Entities;
+using HotelBooking.Core.Interfaces;
 using HotelBooking.WebApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace HotelBooking.UnitTests
-{
+namespace HotelBooking.UnitTests;
+
     public class RoomsControllerTests
     {
         private RoomsController controller;
@@ -115,4 +116,4 @@ namespace HotelBooking.UnitTests
             fakeRoomRepository.Verify(x => x.RemoveAsync(It.IsAny<int>()));
         }
     }
-}
+

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using HotelBooking.Core;
+﻿using HotelBooking.Core.Entities;
+using HotelBooking.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace HotelBooking.WebApi.Controllers
-{
+namespace HotelBooking.WebApi.Controllers;
+
     [ApiController]
     [Route("[controller]")]
     public class CustomersController : Controller
@@ -24,4 +24,4 @@ namespace HotelBooking.WebApi.Controllers
         }
 
     }
-}
+
