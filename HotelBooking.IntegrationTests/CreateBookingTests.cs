@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net;
-using System.Net.Http;
+using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Xunit;
 using FluentAssertions;
@@ -54,4 +54,25 @@ public class CreateBookingTests : IClassFixture<CustomWebAppFactory<Program>>, I
             CustomerId = 1
         };
     }
+    
+    [Theory]
+    [InlineData("2025-11-14 12:00:00", "2025-11-19 12:00:00", 1, 1)]
+    public async Task FailToCreateBookingDueToOverlap(string startDate, string endDate, int roomId, int customerId)
+    {
+        var client = _factory.CreateClient();
+        var booking = new Booking
+        {
+            StartDate = DateTime.Parse(startDate),
+            EndDate = DateTime.Parse(endDate),
+            RoomId = roomId,
+            CustomerId = customerId
+        };
+
+        var response = await client.PostAsJsonAsync("/bookings", booking);
+
+        response.IsSuccessStatusCode.Should().BeFalse();
+        response.StatusCode.Should().Be(System.Net.HttpStatusCode.Conflict);
+    }
+    
+    
 }
